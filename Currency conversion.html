@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Amount: <input type="text" id="myInput" placeholder="Nhap so tien">
+<hr>
+From Currency: <select id="moneyOne">
+    <option value="1">Dollars</option>
+    <option value="23430">VietNamDong</option>
+</select>
+To Currency: <select id="moneyTwo">
+    <option value="1">Dollars</option>
+    <option value="23430">VietNamDong</option>
+</select>
+<button type="button" onclick="ChangeMoney();">Change</button>
+<hr>
+<h3>Result:</h3>
+<p id="myResult"></p>
+<script>
+    function ChangeMoney() {
+        let money = Number(document.getElementById("myInput").value);
+        let valueOne = document.getElementById("moneyOne").value;
+        let valueTwo = document.getElementById("moneyTwo").value;
+        let result = parseInt((money * valueTwo) / valueOne);
+        document.getElementById("myResult").innerHTML = result;
+    }
+</script>
+</body>
+</html>
